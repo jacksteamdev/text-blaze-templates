@@ -1,0 +1,27 @@
+{
+  "name": "text-blaze-templates",
+  "version": "1.0.0",
+  "description": "Templates for TextBlaze to use with Roam Research",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jacksteamdev/text-blaze-templates.git"
+  },
+  "keywords": [
+    "TextBlaze",
+    "Roam-Research"
+  ],
+  "author": "Jack Steam <jacksteamdev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacksteamdev/text-blaze-templates/issues"
+  },
+  "homepage": "https://github.com/jacksteamdev/text-blaze-templates#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.6.0"
+  }
+}
