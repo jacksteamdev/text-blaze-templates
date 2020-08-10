@@ -4,7 +4,7 @@
   "description": "Templates for TextBlaze to use with Roam Research",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -e js,md --ignore templates/ index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
     "url": "https://github.com/jacksteamdev/text-blaze-templates/issues"
   },
   "homepage": "https://github.com/jacksteamdev/text-blaze-templates#readme",
-  "dependencies": {},
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  },
   "devDependencies": {
     "eslint": "^7.6.0"
   }

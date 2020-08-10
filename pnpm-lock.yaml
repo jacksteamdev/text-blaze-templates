@@ -1,3 +1,5 @@
+dependencies:
+  fs-extra: 9.0.1
 devDependencies:
   eslint: 7.6.0
 lockfileVersion: 5.1
@@ -95,6 +97,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==
+  /at-least-node/1.0.0:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
   /balanced-match/1.0.0:
     dev: true
     resolution:
@@ -355,6 +363,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-r5wGx7YeOwNWNlCA0wQ86zKyDLMQr+/RB8xy74M4hTphfmjlijTSSXGuH8rnvKZnfT9i+75zmd8jcKdMR4O6jA==
+  /fs-extra/9.0.1:
+    dependencies:
+      at-least-node: 1.0.0
+      graceful-fs: 4.2.4
+      jsonfile: 6.0.1
+      universalify: 1.0.0
+    dev: false
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
   /fs.realpath/1.0.0:
     dev: true
     resolution:
@@ -390,6 +409,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-BWICuzzDvDoH54NHKCseDanAhE3CeDorgDL5MT6LMXXj2WCnd9UC2szdk4AWLfjdgNBCXLUanXYcpBBKOSWGwg==
+  /graceful-fs/4.2.4:
+    dev: false
+    resolution:
+      integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
   /has-flag/3.0.0:
     dev: true
     engines:
@@ -478,6 +501,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
+  /jsonfile/6.0.1:
+    dependencies:
+      universalify: 1.0.0
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.2.4
+    resolution:
+      integrity: sha512-jR2b5v7d2vIOust+w3wtFKZIfpC2pnRmFAhAC/BuweZFQR8qZzxH1OyrQ10HmdVYiXWkYUqPVsz91cG7EL2FBg==
   /levn/0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -704,6 +735,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+  /universalify/1.0.0:
+    dev: false
+    engines:
+      node: '>= 10.0.0'
+    resolution:
+      integrity: sha512-rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==
   /uri-js/4.2.2:
     dependencies:
       punycode: 2.1.1
@@ -743,3 +780,4 @@ packages:
       integrity: sha512-/lg70HAjtkUgWPVZhZcm+T4hkL8Zbtp1nFNOn3lRrxnlv50SRBv7cR7RqR+GMsd3hUXy9hWBo4CHTbFTcOYwig==
 specifiers:
   eslint: ^7.6.0
+  fs-extra: ^9.0.1
