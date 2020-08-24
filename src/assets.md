@@ -1,0 +1,14 @@
+- Tags: #[[🏔️ Projects]] #Assets
+- Related:
+    - Composition
+    - Marketing
+    - Video
+- ----------------------------------------------- 
+- [[Project Todos]]
+    - {{[[TODO]]}} Promo image
+    - {{[[TODO]]}} Screenshots
+        - {{[[TODO]]}} Add captions for each
+    - {{[[TODO]]}} Teaching slides
+    - {{[[TODO]]}} Overlay pngs
+- ----------------------------------------------- 
+- Embed images

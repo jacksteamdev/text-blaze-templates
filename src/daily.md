@@ -1,0 +1,6 @@
+- Daily Review::
+    - {{[[TODO]]}} Review [[🏁 Live List]] and [[Weekly Outcomes]]
+    - {{[[TODO]]}} Convert today's #TempNotes for 10 minutes
+    - {{[[TODO]]}} Review #active projects
+    - {{[[TODO]]}} Pick #autopilot task for next day
+    - {{[[TODO]]}} Choose [meals and chores](https://roamresearch.com/#/app/jackandamyhome) for next day

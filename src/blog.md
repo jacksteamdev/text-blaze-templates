@@ -1,13 +1,13 @@
-Tags: #[[🏔️ Projects]] #[[Blog Post]] #new
-Due Date:
-Goals:
-
-Links:
-
---------------------------------------
-
-[[Project Todos]]
-
-  {{[[TODO]]}}
-
---------------------------------------
+- Tags: #[[🏔️ Projects]] #[[Blog Post]] #jackandamydev
+- Related:
+    - Composition
+    - Marketing
+    - Assets
+    - Video
+- ----------------------------------------------- 
+- [[Project Todos]]
+    - {{[[TODO]]}} Write blog post
+- ----------------------------------------------- 
+- Outline
+- ----------------------------------------------- 
+- Full Text

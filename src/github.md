@@ -1,0 +1,10 @@
+- Tags: #[[🗺️ Areas]] #GitHub #[[Extend Chrome]]
+- Links:
+    - [GitHub Repo]()
+    - [PNG on Imgur]()
+- Related:
+    - SEO
+- ----------------------------------------------- 
+- Open issues:
+- Current features:
+- ----------------------------------------------- 
