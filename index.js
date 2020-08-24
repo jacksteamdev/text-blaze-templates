@@ -11,58 +11,44 @@ fs.readdir('src').then(async (files) => {
 
     await Promise.all(
       mdFiles.map(async (filePath) => {
+        console.log('🚀: converting template', filePath)
         const text = await fs.readFile(filePath, 'utf8')
 
+        let indent = 0
+        let start = false
         const template = text
-          .split(/[\n\r]/g)
-          .reduce(
-            (r, line) => {
-              const replaced = line.replace(/^ */, (match) => {
-                const indent = match.length
+          .split(/^( *)- /gm)
+          .reduce((r, line, i) => {
+            start = line.length > 0 || start
 
-                // Levels of indentation change
-                const change =
-                  line.length && Math.floor((indent - r.indent) / 2)
-
-                let result
-                if (!line.length) {
-                  // Empty line, new block
-                  result = '{key: enter}'
-                } else if (line.length && change > 0) {
-                  // Indent one level
-                  result = '{key: tab}'
-                } else if (line.length && change < 0) {
-                  // Unindent
-                  result = Array.from(
-                    { length: Math.abs(change) },
-                    () => '{key: enter}'
-                  ).join('')
-                } else {
-                  // Strip leading spaces
-                  result = ''
-                }
-
-                // console.log('============================')
-                // console.log(`🚀: line: "${line}"`)
-                // console.log('🚀: line.length', line.length)
-                // console.log('🚀: prev indent', r.indent)
-                // console.log('🚀: this indent', indent)
-                // console.log('🚀: change', change)
-                // console.log(`🚀: match: "${match}"`)
-                // console.log('🚀: offset', offset)
-                // console.log(`🚀: result: "${result}"`)
-
-                r.indent = line.length ? indent : r.indent
-                return result
-              })
-
-              r.lines.push(replaced)
+            if (!start) {
               return r
-            },
-            { indent: 0, lines: [] }
-          )
-          .lines.join('\n')
-          .replace(/\n\{key: enter\}\n?/g, ' {key: enter}')
+            } else if (start && /^\s*$/.test(line)) {
+              // This is a new block
+              // console.log('🚀: indentation', line.length / 4)
+
+              const _indent = line.length / 4
+              let keys = ['enter']
+              if (_indent > indent) {
+                // Need to indent one more
+                keys.push('tab')
+              } else if (_indent < indent) {
+                // Need to indent less
+                keys.push(...Array(indent - _indent).fill('enter'))
+              }
+              // console.log('🚀: keys', keys)
+
+              indent = _indent
+              return (
+                r + (i ? ' ' + keys.map((key) => `{key: ${key}}`).join('') : '')
+              )
+            } else {
+              // This is a line of text
+              // console.log('🚀: line', line)
+              return r + line.trim()
+            }
+          }, '')
+          .trim()
 
         return fs.outputFile(filePath.replace('src', 'templates'), template)
       })
