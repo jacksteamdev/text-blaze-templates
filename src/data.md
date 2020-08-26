@@ -1,7 +1,0 @@
-- Tags: #Notes #Data #PartialNotes
-- Contextual Summary:
-    - Expand the fact in the title in your own words
-- Related Notes:
-    - Link notes here and explain why they are related
-- Sources:
-    - Link and quote documentation and resources that prove the fact
